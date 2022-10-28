@@ -1,0 +1,33 @@
+.Tasks{
+    padding: 40px 26px;
+    background: #FFFFFF;
+    border: 2px solid #009C9C;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    max-width: 300px;
+    width: 100%;
+}
+.TaskForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.TaskText{
+    width: 100%;
+    padding: 7px 5px;
+    border: 2px solid #009C9C;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #009C9C;
+    font-size: 18px;
+}
+.TaskDate{
+    width: 100%;
+    padding: 7px 5px;
+    border: 2px solid #009C9C;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #009C9C;
+    font-size: 18px;
+}
