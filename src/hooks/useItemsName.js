@@ -5,6 +5,7 @@ export const useItemsName = () => {
     const [ name, setName ] = useState([]);
 
     const { items }  = useSelector( store => store.items );
+    console.log(items)
 
     useEffect(() => {
         if (items.length > 0){
@@ -12,6 +13,8 @@ export const useItemsName = () => {
                 return [element.item, element.active]
             });
             setName(newName)
+        } else {
+            setName([])
         }
     }, [items])
 

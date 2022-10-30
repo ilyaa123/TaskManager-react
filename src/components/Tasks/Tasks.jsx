@@ -51,7 +51,7 @@ export const Tasks = () => {
                     '' :
                     <div className={style.Tasks}>
                         <form className={style.TaskForm} onSubmit={handleOnSubmit}>
-                            <input className={style.TaskText} type="text" placeholder="Название" />
+                            <input className={style.TaskText} type="text" placeholder="Название работы" />
                             <input className={style.TaskDate} type="date" placeholder="Дата" />
                             <button className={style.TaskBtn}>
                                 <svg width="56.25" height="56.25" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -19,6 +19,8 @@ export const useTasks = () => {
 
             });
 
+        } else {
+            setTasks([])
         }
 
     }, [items])

@@ -2,4 +2,5 @@ body{
     background: linear-gradient(284.04deg, #009C9C 0%, #39E639 100%);
     background-position: center;
     background-size: cover;
+    min-height: 100vh;
 }

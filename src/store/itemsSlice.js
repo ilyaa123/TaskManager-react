@@ -26,6 +26,7 @@ const itemsSlice = createSlice({
                 }
                 return elem
             });
+            console.log(state.items)
             localStorage.setItem('items', JSON.stringify(state.items));
         },
         setActive: (state, action) => {
@@ -45,6 +46,17 @@ const itemsSlice = createSlice({
                 return {...elem, homemade: newHomemade}
             });
             localStorage.setItem('items', JSON.stringify(state.items));
+        },
+        deleteItem: (state, action) => {
+            state.items = state.items.filter(elem => elem.item !== action.payload);
+
+            if (state.items.length > 0){
+                state.items = state.items.map(elem => { return {...elem, active: 'false'}});
+
+                state.items[0].active = 'true'
+            }
+
+            localStorage.setItem('items', JSON.stringify(state.items));
         }
     }
 });
@@ -55,3 +67,4 @@ export const { setItem } = itemsSlice.actions;
 export const { setHomemade } = itemsSlice.actions;
 export const { setActive } = itemsSlice.actions;
 export const { deleteHomemade } = itemsSlice.actions;
+export const { deleteItem } = itemsSlice.actions;
