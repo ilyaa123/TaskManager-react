@@ -6,6 +6,7 @@ import { setHomemade } from "../../store/itemsSlice";
 
 import style from './Task.module.css';
 import { useItemsName } from "../../hooks/useItemsName";
+import { useSort } from "../../hooks/useSort";
 
 export const Tasks = () => {
 
@@ -16,7 +17,9 @@ export const Tasks = () => {
     const name = useItemsName();
     
     const newTasks = tasks[0] || [];
-    
+
+    const sortArray = useSort(newTasks);
+
     const item = tasks[1] || [];
     
     const handleOnSubmit = (event) => {
@@ -24,7 +27,7 @@ export const Tasks = () => {
         
         const name = event.target.querySelector('input[type=text]').value;
         const date = event.target.querySelector('input[type=date]').value;
-        
+
         const action = {
             item,
             homemade: {
@@ -42,9 +45,9 @@ export const Tasks = () => {
         <>
             <div style={{width: '100%', display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start',gap: '40px', flexWrap: 'wrap' }}>
                 {
-                    newTasks.length === 0 ?
+                    sortArray.length === 0 ?
                     '' :
-                    newTasks.map((task, key) => <TaskItem task={task} key={key} />)
+                    sortArray.map((task, key) => <TaskItem task={task} key={key} item={item} />)
                 }
                 {
                     name.length === 0 ?

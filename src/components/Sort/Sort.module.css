@@ -1,0 +1,60 @@
+.Sort{
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.SortTitle{
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-right: 20px;
+}
+.SortWrapper{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+.SortBtn{
+    width: 100%;
+    padding: 5px;
+    background-color: #009C9C;
+    font-size: 16px;
+    color: #FFFFFF;
+    border-radius: 2px;
+}
+.SortOption{
+    width: 100%;
+    position: absolute;
+    top: 31px;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.36s;
+}
+.SortItem{
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.SortItem:last-child{
+    margin-bottom: 0;
+}
+.SortOptionActive{
+    width: 100%;
+    position: absolute;
+    top: 31px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00c7c7;
+    padding: 40px 0;
+    border-radius: 0 0 5px 5px;
+    height: auto;
+    transition: height 0.36s;
+}

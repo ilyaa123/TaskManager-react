@@ -5,7 +5,6 @@ export const useItemsName = () => {
     const [ name, setName ] = useState([]);
 
     const { items }  = useSelector( store => store.items );
-    console.log(items)
 
     useEffect(() => {
         if (items.length > 0){
