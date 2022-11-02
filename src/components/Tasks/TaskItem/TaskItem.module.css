@@ -16,8 +16,10 @@
     line-height: 28px;
     color: #009C9C;
     margin-bottom: 60px;
+    font-family: 'Comfortaa';
 }
 .TaskItemDate{
+    font-family: 'Comfortaa';
     font-weight: 600;
     font-size: 24px;
     line-height: 28px;
@@ -42,6 +44,6 @@
 .TaskItemDelete::after{
     content: '-';
     display: block;
-    width: 14px;
+    width: 13px;
     height: 50px;
 }
