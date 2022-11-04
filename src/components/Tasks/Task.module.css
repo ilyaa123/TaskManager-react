@@ -33,3 +33,9 @@
     font-size: 18px;
     font-family: 'Comfortaa';
 }
+@media (max-width: 520px) {
+    .Tasks{
+        max-width: none;
+        padding: 30px 10px;
+    }
+}

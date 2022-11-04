@@ -1,0 +1,12 @@
+.Home{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-right: auto;
+    max-width: calc(1185px + ((100vw - 1185px) / 2));
+}
+@media (max-width: 980px) {
+    .Home{
+        flex-direction: column;
+    }
+}

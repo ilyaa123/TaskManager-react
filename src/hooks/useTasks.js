@@ -2,10 +2,10 @@ import { useEffect, useState } from "react"
 import { useSelector } from 'react-redux';
 
 export const useTasks = () => {
-    const [ tasks, setTasks ] = useState([]);
+    const [ tasks, setTasks ] = useState([[], '']);
 
     const { items }  = useSelector( store => store.items );
-
+    
     useEffect(() => {
         
         if (items.length !== 0){
@@ -20,9 +20,10 @@ export const useTasks = () => {
             });
 
         } else {
-            setTasks([])
+            setTasks([[], ''])
         }
 
     }, [items])
+    
     return tasks;
 }

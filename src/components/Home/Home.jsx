@@ -1,11 +1,12 @@
 import { Item } from "../Item/Item"
 import { Tasks } from "../Tasks/Tasks"
 
+import style from './Home.module.css';
 
 export const Home = () => {
 
     return (
-        <div style={{display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginRight: 'calc((100vw - 1165px) / 2)'}}>
+        <div className={style.Home}>
             <Item />
             <Tasks />
         </div>

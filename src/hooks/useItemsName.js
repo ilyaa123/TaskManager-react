@@ -5,7 +5,7 @@ export const useItemsName = () => {
     const [ name, setName ] = useState([]);
 
     const { items }  = useSelector( store => store.items );
-
+    
     useEffect(() => {
         if (items.length > 0){
             const newName = items.map(element => {
@@ -16,6 +16,6 @@ export const useItemsName = () => {
             setName([])
         }
     }, [items])
-
+    
     return name;
 }

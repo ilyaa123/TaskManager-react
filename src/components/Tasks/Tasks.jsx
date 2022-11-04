@@ -7,13 +7,14 @@ import { setHomemade } from "../../store/itemsSlice";
 import style from './Task.module.css';
 import { useItemsName } from "../../hooks/useItemsName";
 import { useSort } from "../../hooks/useSort";
+import { memo } from "react";
 
-export const Tasks = () => {
+export const Tasks = memo(() => {
 
     const dispatch = useDispatch()
 
     const tasks = useTasks();
-
+    
     const name = useItemsName();
     
     const newTasks = tasks[0] || [];
@@ -68,4 +69,4 @@ export const Tasks = () => {
             </div>
         </>
     )
-}
+})

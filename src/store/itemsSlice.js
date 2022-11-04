@@ -7,6 +7,7 @@ const itemsSlice = createSlice({
     },
     reducers: {
         setItem: (state, action) => {
+            console.log('setItem');
             state.items = [...state.items, {item: action.payload, active: 'false', homemade: []}];
             state.items = state.items.map(elem => {
                 if (action.payload === elem.item){
@@ -20,6 +21,7 @@ const itemsSlice = createSlice({
 
         },
         setHomemade: (state, action) => {
+            console.log('setHomemade');
             state.items = state.items.map(elem => {
                 if (action.payload.item === elem.item){
                     elem.homemade = [...elem.homemade, action.payload.homemade]
@@ -29,6 +31,7 @@ const itemsSlice = createSlice({
             localStorage.setItem('items', JSON.stringify(state.items));
         },
         setActive: (state, action) => {
+            console.log('setActive');
             state.items = state.items.map(elem => {
                 if (action.payload === elem.item){
                     elem.active = 'true';
@@ -40,6 +43,7 @@ const itemsSlice = createSlice({
             localStorage.setItem('items', JSON.stringify(state.items));
         },
         deleteHomemade: (state, action) => {
+            console.log('deleteHomemade');
             state.items = state.items.map(elem => {
                 if (elem.item === action.payload[1]){
                     const newHomemade = elem.homemade.filter(made => {
@@ -57,6 +61,8 @@ const itemsSlice = createSlice({
             localStorage.setItem('items', JSON.stringify(state.items));
         },
         deleteItem: (state, action) => {
+            console.log('deleteItem');
+            console.log(state.items);
             state.items = state.items.filter(elem => elem.item !== action.payload);
 
             if (state.items.length > 0){

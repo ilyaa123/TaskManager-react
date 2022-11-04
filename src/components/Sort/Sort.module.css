@@ -60,3 +60,8 @@
     height: auto;
     transition: height 0.36s;
 }
+@media (max-width: 520px) {
+    .SortTitle{
+        display: none;
+    }
+}

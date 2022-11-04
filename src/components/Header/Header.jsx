@@ -11,8 +11,7 @@ export const Header = () => {
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
-        const value = event.target.querySelector('input').value;
-        console.log('value: ', value);
+        const value = event.target.querySelector('input').value;;
         dispatch(setItem(value))
 
         event.target.reset();

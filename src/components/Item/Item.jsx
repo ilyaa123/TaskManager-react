@@ -1,13 +1,15 @@
+import { memo } from "react";
 import { useItemsName } from "../../hooks/useItemsName"
 import { ItemButton } from "./ItemButton/ItemButton";
 
+import style from './ItemButton/ItemButton.module.css';
 
-export const Item = () => {
+export const Item = memo(() => {
 
     const names = useItemsName();
 
     return (
-        <div style={{padding: '0 20px', display: 'flex', flexDirection: 'column'}}>
+        <div className={style.ItemContainer}>
             {
                 names.length === 0 ? 
                 '' :
@@ -15,4 +17,4 @@ export const Item = () => {
             }
         </div>
     )
-} 
+})

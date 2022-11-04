@@ -39,3 +39,36 @@
     letter-spacing: 0.055em;
     color: #FFFFFF;
 }
+@media (max-width: 980px) {
+    .HeaderLogo{
+        font-size: 18px;
+        margin-right: 20px;
+    }
+    .HeaderInput{
+        padding: 3px;
+        font-size: 16px;
+    }
+    .HeaderButton{
+        height: 31px;
+        padding: 0 10px;
+        border-left: none;
+        font-weight: 500;
+        font-size: 14px;
+        word-wrap: normal;
+        min-width: 170px;
+    }
+}
+@media (max-width: 520px) {
+    .HeaderContainer{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .HeaderLogo{
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+    .HeaderForm{
+        width: 100%;
+    }
+}
