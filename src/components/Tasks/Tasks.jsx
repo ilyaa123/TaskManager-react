@@ -44,7 +44,7 @@ export const Tasks = memo(() => {
 
     return (
         <>
-            <div style={{width: '100%', display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start',gap: '40px', flexWrap: 'wrap' }}>
+            <div style={{width: '100%', display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start',gap: '40px', flexWrap: 'wrap', padding: '0 5px' }}>
                 {
                     sortArray.length === 0 ?
                     '' :

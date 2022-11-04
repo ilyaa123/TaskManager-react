@@ -45,16 +45,13 @@
         margin-right: 20px;
     }
     .HeaderInput{
-        padding: 3px;
+        padding: 7px;
         font-size: 16px;
     }
     .HeaderButton{
-        height: 31px;
+        height: 39px;
         padding: 0 10px;
-        border-left: none;
-        font-weight: 500;
         font-size: 14px;
-        word-wrap: normal;
         min-width: 170px;
     }
 }
